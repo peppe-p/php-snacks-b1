@@ -55,16 +55,43 @@ $posts = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .data {
+        margin: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .post {
+        margin: 20px;
+    }
+    </style>
     <title>SNACK 3</title>
 </head>
 
 <body>
 
     <?php
-    foreach ($posts as $data => $post){
+    foreach ($posts as $data => $postList){
         ?>
     <div class="data">
         <h2><?php echo $data ?></h2>
+        <?php
+        foreach ($postList as $post){
+            ?>
+        <div class="post">
+            <h3><?php echo $post["title"] ?></h3>
+            <h5><?php echo $post["author"] ?></h5>
+            <p><?php echo $post["text"] ?></p>
+        </div>
+        <?php
+        }
+        ?>
     </div>
     <?php
     }
