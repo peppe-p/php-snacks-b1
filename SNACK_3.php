@@ -61,8 +61,12 @@ $posts = [
 <body>
 
     <?php
-    foreach ($posts as $data){
-        echo var_dump($data);
+    foreach ($posts as $data => $post){
+        ?>
+    <div class="data">
+        <h2><?php echo $data ?></h2>
+    </div>
+    <?php
     }
 ?>
 
