@@ -51,18 +51,26 @@ $ads = [
 </head>
 <body>
     <section>
-    <?php foreach ($ads as $ad){
+    <?php 
+    $freeSlot = [];
+    foreach ($ads as $ad){
         if ($ad["is_active"] == true) {
             ?>
             <div class="ad">
-            <a href="<?php echo $ad["link"] ?>">
-            <img src="<?php echo $ad["image_path"] ?>" alt="">
-            </a>
+                <a href="<?php echo $ad["link"] ?>">
+                    <img src="<?php echo $ad["image_path"] ?>" alt="">
+                </a>
             </div>
             <?php
+        } else {
+            array_push($freeSlot, $ad);
         }
     };
     ?>
-</section>
+    </section>
+    <div>
+    <h3>Slot ADVs liberi:</h3>
+    <?php echo count($freeSlot) ?>
+    </div>
 </body>
 </html>
