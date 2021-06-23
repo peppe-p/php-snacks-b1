@@ -7,25 +7,25 @@ Olimpia Milano - Cantù | 55-60
 <?php 
  $partite = [
      [
-         'casa' => "Milano",
-         'ospite' => "Roma",
+         "casa" => "Milano",
+         "ospite" => "Roma",
          "punti" => "40 - 50"
      ],
      [
-         'casa' => "Palermo",
-         'ospite' => "Catania",
+         "casa" => "Palermo",
+         "ospite" => "Catania",
          "punti" => "75 - 40"
      ],
      [
-         'casa' => "Napoli",
-         'ospite' => "Palermo",
+         "casa" => "Napoli",
+         "ospite" => "Palermo",
          "punti" => "30 - 50"
      ],
      [
-         'casa' => "Pisa",
-         'ospite' => "Roma",
+         "casa" => "Pisa",
+         "ospite" => "Roma",
          "punti" => "50 - 45"
-     ],
+     ]
     ];
  ?>
 
@@ -43,7 +43,7 @@ Olimpia Milano - Cantù | 55-60
     <?php foreach ($partite as $partita){
         ?>
     <ol>
-        <li><?php $partita["casa"] . ' - '. $partita["ospite"] ?><br> <?php $partita["punti"] ?></li>
+        <li><?php echo $partita["casa"] . " - " . $partita["ospite"] ?><br><?php echo $partita["punti"] ?></li>
     </ol>
     <?php
     }
