@@ -40,14 +40,14 @@ Olimpia Milano - Cantù | 55-60
 </head>
 
 <body>
-    <?php foreach ($partite as $partita){
-        ?>
     <ol>
+        <?php foreach ($partite as $partita){
+            ?>
         <li><?php echo $partita["casa"] . " - " . $partita["ospite"] ?><br><?php echo $partita["punti"] ?></li>
+        <?php
+        }
+        ?>
     </ol>
-    <?php
-    }
-    ?>
 </body>
 
 </html>
